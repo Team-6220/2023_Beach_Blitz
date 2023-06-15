@@ -46,10 +46,7 @@ public class AutoBalanceCommand extends CommandBase{
         //double armSet  = positions[0] + (this.armAdjust.get()*-5);
         double deg = drivetrainSubsystem.getGyroPitch();
             ChassisSpeeds c = new ChassisSpeeds(-balancePIDController.calculate(deg, 0),0d,0d);
-            drivetrainSubsystem.drive(m_kinematics.toSwerveModuleStates(c));
-
-
-         
+            drivetrainSubsystem.drive(m_kinematics.toSwerveModuleStates(c));         
     }
     @Override
     public boolean isFinished() {

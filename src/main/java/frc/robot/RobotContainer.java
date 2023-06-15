@@ -284,7 +284,7 @@ intakeSubsystem.setDefaultCommand(new IntakeDefaultCommand(
       //new CloseSolenoidCmd(intakeSubsystem),//for cone only
       new ATWAutoCmd(atwSubsystem, zeron, null, null),
       new CloseSolenoidCmd(intakeSubsystem),
-      new PathPlannerCmd(m_drivetrainSubsystem, atwSubsystem, intakeSubsystem, "MidClimb"),
+      new PathPlannerCmd(m_drivetrainSubsystem, atwSubsystem, intakeSubsystem, "OneMeter"),
       new ChargingStationAuto(m_drivetrainSubsystem),
       new LockWheelsCmd(m_drivetrainSubsystem)
     );
